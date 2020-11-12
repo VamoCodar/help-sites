@@ -1,0 +1,30 @@
+.processo {
+    h2 {
+        @include titulo;
+        margin-top: 90px;
+    }
+
+    p {
+        @include subtitulo2;
+        margin-top: 10px;
+        max-width: 550px;
+    }
+}
+
+.circulos {
+    background-image: url(../img/trio-como-funciona.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    display: block;
+    max-width: 993px;
+    height: 362px;
+
+    @include d(s) {
+        margin-top: 40px;
+        background-image: url(../img/trio-como-funciona-mobile.svg);
+        max-width: 100%;
+        height: 709px;
+
+    }
+}

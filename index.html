@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Help - Criação de Sites</title>
+</head>
+
+<body>
+    <main class="intro">
+
+        <nav class="container">
+
+            <div class="row justify-between items-center">
+                <div class="logo"><img src="img/logo.svg" alt="logo"></div>
+                <div class="menu">Menu</div>
+            </div>
+            <!-- fim logo e menu -->
+            <h1>Design e<br> desenvolvimento<br>
+                de sites<span>.</span></h1>
+            <p>feitos a mão com originalidade</p>
+            <!-- fim titulo principal -->
+            <div class="bg-icons"></div>
+            <span class="arrow"><img src="img/seta-down.svg" alt="seta"></span>
+
+        </nav>
+    </main>
+
+    <header>
+        <div class="ondas"><img src="img/bg-preto-completo.svg" alt="ondas-svg"></div>
+    </header>
+    <!-- fim das ondas -->
+    <span class="nuvem rellax" data-rellax-speed="3" data-rellax-xs-speed="3" data-rellax-mobile-speed="3" data-rellax-tablet-speed="6" data-rellax-desktop-speed="3"></span>
+    <!-- fim da nuvem -->
+
+    <section class="oque-fazemos">
+        <div class="container">
+            <h2>o que fazemos<span>.</span></h2>
+            <div class="bg-fundo">
+                <h3>criação de sites web</h3>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                <ul class="row icon-web justify-around">
+                    <li><img src="img/icon-responsive.svg" alt="responsivo">
+                        <p>design<br> responsivo</p>
+                    </li>
+                    <li class="meio"><img src="img/icon-analitics.svg" alt="analise">
+                        <p>ferramenta de<br> analise</p>
+                    </li>
+                    <li class="meio"><img src="img/icon-social.svg" alt="social">
+                        <p>integrado<br> as redes sociais</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <span class="blob-1-a"></span>
+
+        <span class="blob-1-b" data-rellax-speed="3" data-rellax-xs-speed="1" data-rellax-mobile-speed="0.5" data-rellax-tablet-speed="5" data-rellax-desktop-speed="3"></span>
+    </section>
+    <!-- fim da primeira seção -->
+
+    <section class="processo">
+        <div class="container">
+            <h2>como é o processo<span>.</span></h2>
+            <p>Parceria com o cliente. Esse é o segredo para construirmos seu projeto como você precisa que seja.</p>
+            <span class="circulos"></span>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="script/script.js"></script>
+    <script type="text/javascript" src="script/rellax.min.js"></script>
+    <script>
+        var rellax = new Rellax('.nuvem', {
+            speed: 4,
+            center: false,
+            wrapper: null,
+            round: true,
+            vertical: true,
+            horizontal: false,
+            breakpoints: [480, 760, 1200],
+        });
+
+        var rellax = new Rellax('.blob-1-b', {
+            speed: -1,
+            center: true,
+            wrapper: null,
+            round: true,
+            vertical: true,
+            horizontal: false,
+            breakpoints: [480, 760, 1200],
+        });
+
+    </script>
+</body>
+
+</html>

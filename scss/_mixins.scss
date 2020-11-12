@@ -1,0 +1,71 @@
+//fonts
+$font-mono:'IBM Plex Mono',
+monospace;
+$font-sans:'IBM Plex Sans',
+sans-serif;
+//cores
+$gradiente-branco:linear-gradient(171.83deg, rgba(0, 0, 0, 0.03) 8.49%, rgba(0, 0, 0, 0.012) 46.94%);
+$gradiente-laranja:linear-gradient(143.33deg, #FC6E40 23.52%, #EE4137 78.43%);
+$gradiente-amarelo:linear-gradient(204.82deg, #FEDA7C 0.47%, #F5C879 48.54%);
+
+$laranja-escuro: #FC6E40;
+$laranja-claro: #F98E64;
+$amarelo-claro:#F4D88E;
+
+$preto-claro: #767568;
+$preto-base: #282a2d;
+
+$fundo: #f4f1d0;
+$fundo-claro:rgba(244, 241, 208, 0.8);
+//titulos seções
+
+@mixin titulo {
+    font-size: 42px;
+    line-height: 54px;
+    font-weight: 700;
+    letter-spacing: 4.5%;
+    text-transform: uppercase;
+    font-family: $font-mono;
+    font-style: normal;
+
+    @include d(s) {
+        font-size: 28px;
+    }
+
+    & span {
+        color: $laranja-escuro;
+    }
+}
+
+@mixin subtitulo($tamanho:16px) {
+    font-size: $tamanho;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 29px;
+    letter-spacing: 0.07em;
+    font-family: $font-sans;
+    text-transform: uppercase;
+    color: $preto-base;
+
+}
+
+@mixin subtitulo2 {
+    font-family: $font-sans;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: 0.07em;
+    color: $preto-claro;
+
+    @include d(s) {
+        font-size: 20px;
+        line-height: 22px;
+
+    }
+}
+
+@mixin blur {
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}

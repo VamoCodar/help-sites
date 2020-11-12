@@ -1,0 +1,151 @@
+//primeira seção
+
+.nuvem {
+    right: 0;
+    position: absolute;
+    margin-top: 200px;
+    z-index: -200;
+    transition: 0.3s ease-out;
+    background-image: url(../img/nuvem.svg);
+    width: 387px;
+    height: 302px;
+    display: block;
+    background-repeat: no-repeat;
+
+
+    @include d(s) {
+        background-image: url(../img/nuvem-mobile.svg);
+        left: 0;
+        position: absolute;
+        margin-top: 180px;
+        z-index: -200;
+        transition: 0.3s ease-out;
+        width: 110px;
+        height: 85px;
+        display: block;
+    }
+}
+
+
+.oque-fazemos {
+    position: relative;
+    width: 100%;
+
+    h2 {
+        @include titulo;
+        margin-bottom: 60px;
+
+
+    }
+}
+
+.bg-fundo {
+    width: 700px;
+    background: $gradiente-branco;
+    height: 380px;
+    margin: 0 auto;
+    padding: 30px 30px 30px 30px;
+    @include blur;
+    border-radius: 12px;
+    position: relative;
+
+    h3 {
+        @include subtitulo(24px);
+        z-index: 9;
+
+        @include d(s) {
+            font-size: 22px;
+        }
+
+
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.045em;
+        color: $preto-claro;
+        margin-bottom: 40px;
+
+    }
+
+    @include d (s) {
+        width: 300px;
+        height: 900px;
+        box-shadow: 1px 1px 1px 0.1px rgba($color: #000000, $alpha: 0.1);
+
+    }
+}
+
+.icon-web {
+    p {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 21px;
+        text-align: center;
+        letter-spacing: 0.045em;
+        text-transform: uppercase;
+        text-align: center;
+        margin-top: 15px;
+        color: #FC6E40;
+    }
+
+    img {
+        margin: 0 auto;
+    }
+
+
+}
+
+.icon-web {
+    @include d(s) {
+        flex-direction: column;
+
+    }
+}
+
+//blob
+
+
+
+.blob-1-a {
+    position: absolute;
+    top: 200px;
+    z-index: -99;
+    background-image: url(../img/blob-1-a.svg);
+    width: 230px;
+    height: 780px;
+    display: block;
+    background-repeat: no-repeat;
+    transition: 0.4s ease;
+
+
+    @include d(s) {
+        background-image: url(../img/blob-1-a-mobile.svg);
+        top: initial;
+        margin-top: 10px;
+    }
+}
+
+.blob-1-b {
+    position: absolute;
+    top: 460px;
+    transition: 0.5s ease;
+    z-index: -90;
+    background-image: url(../img/blob-1-b.svg);
+    width: 199px;
+    height: 581px;
+    display: block;
+    background-repeat: no-repeat;
+
+    @include d(s) {
+        background-image: url(../img/blob-1-b-mobile.svg);
+        top: initial;
+        margin-top: -20px;
+        transition: 0.4s ease;
+
+    }
+
+
+}
