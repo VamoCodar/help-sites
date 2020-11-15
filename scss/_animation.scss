@@ -1,31 +1,101 @@
-/* @keyframes move1 {
-    from {
-        transform: translateX(-40px);
+@keyframes rodadinha {
+    0% {
+        transform: rotate(0);
     }
-}
 
-@keyframes move2 {
-    from {
-        transform: translateX(-60px);
-    }
-}
-
-@keyframes move3 {
-    from {
-        transform: translateX(-80px);
+    100% {
+        transform: rotate(360deg);
     }
 }
 
 
+@keyframes seta-mobile {
+    from {
+        transform: translate(20px, 10%)
+    }
 
-.wave-1 {
-    animation: move1 4s ease-in-out infinite alternate;
+    to {
+        transform: translate(10px, 30%);
+        background-image: url(../img/1.svg);
+        width: 50px;
+        opacity: 50%;
+    }
+
+
+
 }
 
-.wave-2 {
-    animation: move2 4s 200ms ease-in-out infinite alternate;
+@keyframes seta-mobile2 {
+    from {
+        transform: translate(20px, 100%);
+        opacity: 0;
+    }
+
+    10% {
+
+        opacity: 100%;
+    }
+
+    100% {
+        transform: translate(0px, 80%);
+        background-image: url(../img/1.svg);
+        width: 40px;
+    }
+
+
+
 }
 
-.wave-3 {
-    animation: move3 4s 400ms ease-in-out infinite alternate;
-} */
+@keyframes seta-mobile3 {
+    from {
+        transform: translate(20px, 100%);
+        opacity: 0;
+    }
+
+    10% {
+
+        opacity: 100%;
+    }
+
+    100% {
+        transform: translate(0px, 140%);
+        background-image: url(../img/1.svg);
+        width: 30px;
+    }
+
+
+
+}
+
+@keyframes seta-mobile4 {
+    from {
+        background-image: url(../img/1.svg);
+        width: 200px;
+        right: 40px;
+
+    }
+
+    10% {
+
+        opacity: 100%;
+    }
+
+    100% {
+        transform: translate(0px, 140%);
+        width: 30px;
+    }
+
+
+
+}
+
+@keyframes aparece {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0px, 10%);
+        opacity: 50%;
+    }
+}

@@ -1,14 +1,9 @@
-<svg width="115" height="130" viewBox="0 0 115 130" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M49.06 66.28C46.3533 66.28 44.244 65.524 42.732 64.012C41.22 62.4813 40.464 60.2973 40.464 57.46V46.4H44.104V57.32C44.104 61.1653 45.7653 63.088 49.088 63.088C52.392 63.088 54.044 61.1653 54.044 57.32V46.4H57.628V57.46C57.628 60.2973 56.872 62.4813 55.36 64.012C53.8667 65.524 51.7667 66.28 49.06 66.28ZM64.6857 46.4H68.3257V66H64.6857V46.4Z" fill="white" fill-opacity="0.7"/>
-<circle cx="55" cy="55" r="42.5" stroke="url(#paint0_linear)" stroke-opacity="0.7" stroke-width="3"/>
-<circle cx="55" cy="55" r="53.5" stroke="url(#paint1_linear)" stroke-opacity="0.7" stroke-width="3" stroke-dasharray="5 10"/>
-<path d="M115 66H103.5L100 74L91.5 86L77 97.5L59.5 102H41.5L32.5 97.5L15.5 84L8 97.5L27 129.5L115 106V66Z" fill="#282A2D" fill-opacity="0.9"/>
+<svg  viewBox="0 0 107 119" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M41.06 55.28C38.3533 55.28 36.244 54.524 34.732 53.012C33.22 51.4813 32.464 49.2973 32.464 46.46V35.4H36.104V46.32C36.104 50.1653 37.7653 52.088 41.088 52.088C44.392 52.088 46.044 50.1653 46.044 46.32V35.4H49.628V46.46C49.628 49.2973 48.872 51.4813 47.36 53.012C45.8667 54.524 43.7667 55.28 41.06 55.28ZM56.6857 35.4H60.3257V55H56.6857V35.4Z" fill="white" fill-opacity="0.7"/>
+<circle cx="47" cy="44" r="42.5" stroke="url(#paint0_linear)" stroke-opacity="0.7" stroke-width="3"/>
+<path d="M107 55H95.5L92 63L83.5 75L69 86.5L51.5 91H33.5L24.5 86.5L7.5 73L0 86.5L19 118.5L107 95V55Z" fill="#282A2D" fill-opacity="0.9"/>
 <defs>
-<linearGradient id="paint0_linear" x1="55" y1="11" x2="55" y2="99" gradientUnits="userSpaceOnUse">
-<stop stop-color="#FEDA7C"/>
-<stop offset="1" stop-color="#F5C879"/>
-</linearGradient>
-<linearGradient id="paint1_linear" x1="55" y1="0" x2="55" y2="110" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear" x1="47" y1="0" x2="47" y2="88" gradientUnits="userSpaceOnUse">
 <stop stop-color="#FEDA7C"/>
 <stop offset="1" stop-color="#F5C879"/>
 </linearGradient>

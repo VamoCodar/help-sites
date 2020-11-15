@@ -4,7 +4,7 @@ $gutter: 20px;
 $l-device: 1200px;
 $m-device: 760px;
 $s-device: 480px;
-$ss-device:320px;
+$ss-device:370px;
 
 //mixin media querie
 @mixin d($size) {
@@ -94,10 +94,10 @@ $ss-device:320px;
 .row {
     display: flex;
     flex-wrap: wrap;
-    max-width: 100%;
 }
 
 .column //classes flexbox
+
 
 
 //justify
@@ -175,4 +175,8 @@ $ss-device:320px;
 
 .item-base {
     align-self: baseline;
+}
+
+.no-wrap {
+    flex-wrap: nowrap;
 }

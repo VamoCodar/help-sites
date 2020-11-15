@@ -17,11 +17,10 @@
         background-image: url(../img/nuvem-mobile.svg);
         left: 0;
         position: absolute;
-        margin-top: 180px;
-        z-index: -200;
-        transition: 0.3s ease-out;
-        width: 110px;
-        height: 85px;
+        margin-top: 60px;
+        transition: 0.5s ease-out;
+        width: 160px;
+        height: 100%;
         display: block;
     }
 }
@@ -40,14 +39,17 @@
 }
 
 .bg-fundo {
+    @include blur;
+
     width: 700px;
     background: $gradiente-branco;
     height: 380px;
     margin: 0 auto;
     padding: 30px 30px 30px 30px;
-    @include blur;
     border-radius: 12px;
     position: relative;
+    box-shadow: 1px 1px 1px 0.1px rgba($preto-claro, $alpha: 0.1);
+
 
     h3 {
         @include subtitulo(24px);
@@ -72,7 +74,7 @@
     @include d (s) {
         width: 300px;
         height: 900px;
-        box-shadow: 1px 1px 1px 0.1px rgba($color: #000000, $alpha: 0.1);
+        box-shadow: 1px 1px 1px 0.1px rgba($preto-claro, $alpha: 0.1);
 
     }
 }
@@ -130,7 +132,7 @@
 
 .blob-1-b {
     position: absolute;
-    top: 460px;
+    top: 480px;
     transition: 0.5s ease;
     z-index: -90;
     background-image: url(../img/blob-1-b.svg);
@@ -147,5 +149,263 @@
 
     }
 
+
+}
+
+// ornamentos intro
+//ui circulo
+.ui {
+    background-image: url(../img/ui.svg);
+    width: 107px;
+    height: 109px;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    right: 320px;
+    top: 190px;
+    z-index: -9;
+
+    @include d(m) {
+        right: 90px;
+        top: 190px;
+    }
+
+    @include d (s) {
+        right: initial;
+        top: initial;
+        bottom: 60px;
+        width: 60px;
+        right: 100px;
+        opacity: 70%;
+
+    }
+
+}
+
+.circulo-ui {
+    background-image: url(../img/circulo-ui.svg);
+    width: 110px;
+    height: 110px;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    right: 9px;
+    top: -14px;
+    z-index: 2;
+    animation: rodadinha 22s linear infinite;
+    opacity: 30%;
+
+    @include d (s) {
+        right: initial;
+        top: initial;
+        bottom: 52px;
+        width: 65px;
+        height: 65px;
+        right: 1px;
+
+    }
+
+}
+
+// telas e mouse
+
+.telas {
+    background-image: url(../img/telas.svg);
+    width: 217px;
+    height: 77px;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    right: 360px;
+    top: 310px;
+    z-index: -9;
+
+    @include d (m) {
+        right: initial;
+        top: 450px;
+
+
+    }
+
+    @include d(s) {
+        right: initial;
+        top: 310px;
+        width: 117px;
+        opacity: 20%;
+
+
+    }
+}
+
+.mouse {
+    width: 14px;
+    height: 18px;
+    background-repeat: no-repeat;
+    display: block;
+    position: absolute;
+    right: 100px;
+    top: 55px;
+    z-index: -9;
+
+
+    @include d(s) {
+        right: initial;
+        animation: seta-mobile 1.5s both ease;
+
+        top: initial;
+        width: 10px;
+    }
+}
+
+.mouse2 {
+    @include d(s) {
+        width: 14px;
+        height: 18px;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        right: 100px;
+        top: 55px;
+        z-index: -9;
+        right: initial;
+        animation: seta-mobile2 1.5s both ease;
+        animation-delay: 1.5s;
+        top: initial;
+        width: 10px;
+    }
+}
+
+.mouse3 {
+    @include d(s) {
+
+        width: 14px;
+        height: 18px;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        right: 100px;
+        top: 55px;
+        z-index: -9;
+        right: initial;
+        animation: seta-mobile3 1.5s both ease;
+        animation-delay: 3s;
+        top: initial;
+        width: 10px;
+    }
+}
+
+.mouse4 {
+    @include d(s) {
+
+
+        width: 19px;
+        height: 4px;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        left: 77px;
+        top: 15px;
+        z-index: -9;
+        background-color: $amarelo-claro;
+        border-radius: 1px;
+        opacity: 50%;
+        animation: aparece 1.6s both ease;
+        animation-delay: 0.1s
+    }
+}
+
+.mouse5 {
+    @include d(s) {
+
+
+        width: 15px;
+        height: 4px;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        left: 77px;
+        top: 22px;
+        z-index: -9;
+        background-color: $amarelo-claro;
+        border-radius: 1px;
+        opacity: 50%;
+        animation: aparece 1.6s both ease;
+        animation-delay: 1.7s;
+    }
+}
+
+.mouse6 {
+    @include d(s) {
+        width: 13px;
+        height: 4px;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        left: 77px;
+        top: 29px;
+        z-index: -9;
+        background-color: $amarelo-claro;
+        border-radius: 1px;
+        opacity: 50%;
+        animation: aparece 1.6s both ease;
+        animation-delay: 3.2s;
+    }
+}
+
+.celular1 {
+    @include d(s) {
+        width: 6px;
+        height: 3px;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        left: 107px;
+        top: 23px;
+        z-index: -9;
+        background-color: $amarelo-claro;
+        border-radius: 1px;
+        opacity: 50%;
+        animation: aparece 1.6s both ease;
+        animation-delay: 0.1s;
+    }
+
+}
+
+
+.celular2 {
+    @include d(s) {
+        width: 6px;
+        height: 3px;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        left: 107px;
+        top: 28px;
+        z-index: -9;
+        background-color: $amarelo-claro;
+        border-radius: 1px;
+        opacity: 50%;
+        animation: aparece 1.6s both ease;
+        animation-delay: 1.7s;
+    }
+
+}
+
+.celular3 {
+    @include d(s) {
+        width: 6px;
+        height: 3px;
+        background-repeat: no-repeat;
+        display: block;
+        position: absolute;
+        left: 107px;
+        top: 32px;
+        z-index: -9;
+        background-color: $amarelo-claro;
+        border-radius: 1px;
+        opacity: 50%;
+        animation: aparece 1.6s both ease;
+        animation-delay: 3.2s;
+    }
 
 }

@@ -1,9 +1,13 @@
 body {
     background-color: $fundo;
     overflow-X: hidden;
-    height: 3000px;
+    height: 6000px;
     font-family: $font-sans;
 
+}
+
+*:focus {
+    outline: none;
 }
 
 .intro {
@@ -28,6 +32,7 @@ body {
         text-transform: uppercase;
         margin-top: 80px;
         color: $fundo;
+
 
         @include d(s) {
             font-size: 28px;
@@ -93,10 +98,10 @@ body {
     background-image: url("../img/bg-intro-desktop.svg");
     background-repeat: no-repeat;
     position: absolute;
-    width: 600px;
-    height: 350px;
-    right: 0;
-    top: 150px;
+    width: 480px;
+    height: 550px;
+    right: 20px;
+    top: 180px;
     background-size: contain;
     z-index: -2;
 
@@ -109,7 +114,7 @@ body {
         background-image: url("../img/bg-intro-mobile.svg");
         left: 10px;
         right: 0;
-        top: 130px;
+        top: 145px;
         max-width: 280px;
 
 
@@ -134,11 +139,21 @@ header {
 
 }
 
-.arrow {
-    img {
-        margin: 0 auto;
-        display: block;
-        margin-top: 60px;
-    }
-
+button.arrow {
+    background-image: url(../img/seta-down.svg);
+    display: block;
+    width: 32px;
+    height: 22px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+    padding: 30px;
+    margin-top: 90px;
+    z-index: 2000;
+    border: none;
+    background-color: initial;
+    cursor: pointer !important;
+    position: absolute;
+    top: 360px;
+    left: 0;
+    right: 0;
 }
