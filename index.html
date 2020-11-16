@@ -77,6 +77,7 @@
         <span class="blob-1-a"></span>
 
         <span class="blob-1-b" data-rellax-speed="3" data-rellax-xs-speed="1" data-rellax-mobile-speed="0.5" data-rellax-tablet-speed="3" data-rellax-desktop-speed="3"></span>
+        <span class="blob-1-c" data-rellax-speed="3" data-rellax-xs-speed="1" data-rellax-mobile-speed="0.5" data-rellax-tablet-speed="3" data-rellax-desktop-speed="3"></span>
     </section>
     <!-- fim da primeira seção -->
 
@@ -243,6 +244,15 @@
         });
         var rellax = new Rellax('.blob-3-c', {
             speed: 1,
+            center: true,
+            wrapper: null,
+            round: true,
+            vertical: true,
+            horizontal: false,
+            breakpoints: [480, 760, 1200],
+        });
+        var rellax = new Rellax('.blob-1-c', {
+            speed: -1,
             center: true,
             wrapper: null,
             round: true,

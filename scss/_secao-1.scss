@@ -122,11 +122,10 @@
     background-repeat: no-repeat;
     transition: 0.4s ease;
 
-
     @include d(s) {
-        background-image: url(../img/blob-1-a-mobile.svg);
         top: initial;
-        margin-top: 10px;
+        margin-top: -100px;
+        width: 120px;
     }
 }
 
@@ -142,13 +141,32 @@
     background-repeat: no-repeat;
 
     @include d(s) {
-        background-image: url(../img/blob-1-b-mobile.svg);
         top: initial;
-        margin-top: -20px;
-        transition: 0.4s ease;
+        margin-top: 40px;
+        width: 60px;
+        transition: 1s ease;
 
     }
 
+
+}
+
+.blob-1-c {
+    position: absolute;
+    top: 480px;
+    transition: 1.5s ease;
+    z-index: -90;
+    background-image: url(../img/blob-1-c.svg);
+    width: 199px;
+    height: 581px;
+    display: block;
+    background-repeat: no-repeat;
+
+    @include d(s) {
+        top: initial;
+        margin-top: 0px;
+        width: 80px;
+    }
 
 }
 

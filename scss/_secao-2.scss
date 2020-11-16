@@ -285,6 +285,12 @@
     @include d(s) {
         width: 100px;
 
+
+    }
+
+    @include d(ss) {
+        width: 70px;
+
     }
 }
 
@@ -310,6 +316,11 @@
         width: 90px;
         top: 300px;
         transition: 1.5s ease-out;
+
+    }
+
+    @include d(ss) {
+        width: 70px;
 
     }
 
@@ -342,5 +353,11 @@
         transition: 1.3s ease-out;
 
     }
+
+    @include d(ss) {
+        width: 70px;
+
+    }
+
 
 }

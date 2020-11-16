@@ -6,6 +6,10 @@ body {
 
 }
 
+::selection {
+    background: $laranja-claro;
+}
+
 *:focus {
     outline: none;
 }
@@ -70,11 +74,12 @@ body {
     color: $fundo;
     text-transform: uppercase;
     font-size: 18px;
-    cursor: pointer;
     padding: 10px 20px;
     border: 1px solid $fundo;
     border-radius: 6px;
     font-weight: 500;
+    cursor: pointer;
+    z-index: 99;
 
     &::after {
         content: '';
