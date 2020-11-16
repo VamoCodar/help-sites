@@ -1,5 +1,6 @@
 .quem-somos {
     margin-top: 120px;
+    position: relative;
 
     h2 {
         @include titulo;
@@ -89,7 +90,7 @@
     button {
         position: absolute;
         border: none;
-        width: 60px;
+        width: 18px;
         height: 100%;
         cursor: pointer;
         background-color: initial;
@@ -211,6 +212,7 @@
     @include d(s) {
         width: 280px;
         height: 460px;
+        margin-left: 0;
     }
 }
 
@@ -271,7 +273,52 @@
     position: absolute;
 }
 
-footer {
-    position: relative;
-    height: 400px;
+.blob-4-a {
+    position: absolute;
+    z-index: -99;
+    background-image: url(../img/blob-4-a.svg);
+    width: 117px;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    right: 0px;
+    top: 250px;
+
+
+
+    @include d(s) {
+        width: 80px;
+        top: -120px;
+        background-image: url(../img/blolb-4-a-mobile.svg);
+        right: initial;
+        z-index: -1000;
+
+
+    }
+}
+
+.blob-4-b {
+    position: absolute;
+    z-index: -99;
+    background-image: url(../img/blob-4-b.svg);
+    width: 75px;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    right: 0px;
+    top: 290px;
+    transition: 1.2s ease;
+
+
+
+    @include d(s) {
+        width: 80px;
+        top: -200px;
+        background-image: url(../img/blob-4-b-mobile.svg);
+        right: initial;
+        z-index: -1000;
+        transition: 1.8s ease;
+
+
+    }
 }

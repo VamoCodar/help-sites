@@ -188,6 +188,8 @@
                 </div>
             </div>
         </div>
+        <span class="blob-4-a"></span>
+        <span class="blob-4-b" data-rellax-speed="1" data-rellax-xs-speed="1" data-rellax-mobile-speed="1" data-rellax-tablet-speed="1" data-rellax-desktop-speed="1"></span>
     </section>
     <!-- fim quem somos -->
     <section class="saiba-mais" id="saiba-mais">
@@ -229,16 +231,25 @@
                 <span class="counter">1/3</span>
 
             </div>
-            <footer>
-                <span href="body" class="arrow-up"></span>
 
-            </footer>
 
 
 
         </div>
     </section>
+    <footer>
+        <span href="body" class="arrow-up"></span>
+        <span class="ondas-footer"><img src="img/ondas-footer.svg" alt=""></span>
+        <div class="bg-footer">
+            <ul class="row">
+                <li><img src="img/logo.svg" alt="logo"></li>
+                <li><a href="https://api.whatsapp.com/send?phone=5531998506206&text=Ol%C3%A1%2C%20quero%20fazer%20um%20projeto%20de%20site%20com%20voc%C3%AA.">(31) 99850-6206</a></li>
+                <li><a href="mail-to:contato@siteshelp.com.br"> contato@siteshelp.com.br</a></li>
+            </ul>
+            <p>help criação de sites - alguns direitos reservados</p>
 
+        </div>
+    </footer>
     <button href='#oque-fazemos' class="arrow"></button>
     <div class="menu-open">
         <ul>
@@ -314,6 +325,15 @@
         });
         var rellax = new Rellax('.blob-1-c', {
             speed: -1,
+            center: true,
+            wrapper: null,
+            round: true,
+            vertical: true,
+            horizontal: false,
+            breakpoints: [480, 760, 1200],
+        });
+        var rellax = new Rellax('.blob-4-b', {
+            speed: 1,
             center: true,
             wrapper: null,
             round: true,

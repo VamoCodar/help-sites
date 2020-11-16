@@ -203,7 +203,6 @@ img {
 body {
   background-color: #f4f1d0;
   overflow-X: hidden;
-  height: 6000px;
   font-family: "IBM Plex Sans", sans-serif;
 }
 
@@ -1638,6 +1637,7 @@ button.arrow {
 
 .quem-somos {
   margin-top: 120px;
+  position: relative;
 }
 
 .quem-somos h2 {
@@ -1773,7 +1773,7 @@ button.arrow {
 .slider-container button {
   position: absolute;
   border: none;
-  width: 60px;
+  width: 18px;
   height: 100%;
   cursor: pointer;
   background-color: initial;
@@ -1880,6 +1880,7 @@ button.arrow {
   .card {
     width: 280px;
     height: 460px;
+    margin-left: 0;
   }
 }
 
@@ -1937,9 +1938,50 @@ button.arrow {
   position: absolute;
 }
 
-footer {
-  position: relative;
-  height: 400px;
+.blob-4-a {
+  position: absolute;
+  z-index: -99;
+  background-image: url(../img/blob-4-a.svg);
+  width: 117px;
+  height: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  right: 0px;
+  top: 250px;
+}
+
+@media screen and (max-width: 759px) {
+  .blob-4-a {
+    width: 80px;
+    top: -120px;
+    background-image: url(../img/blolb-4-a-mobile.svg);
+    right: initial;
+    z-index: -1000;
+  }
+}
+
+.blob-4-b {
+  position: absolute;
+  z-index: -99;
+  background-image: url(../img/blob-4-b.svg);
+  width: 75px;
+  height: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  right: 0px;
+  top: 290px;
+  transition: 1.2s ease;
+}
+
+@media screen and (max-width: 759px) {
+  .blob-4-b {
+    width: 80px;
+    top: -200px;
+    background-image: url(../img/blob-4-b-mobile.svg);
+    right: initial;
+    z-index: -1000;
+    transition: 1.8s ease;
+  }
 }
 
 .menu-open {
@@ -2079,5 +2121,66 @@ footer {
   .ativo .menu-open ul:before {
     width: 80px;
     top: 90px;
+  }
+}
+
+.bg-footer {
+  width: 100%;
+  background: #282a2d;
+  height: 100%;
+}
+
+.bg-footer ul {
+  margin: 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.bg-footer ul li {
+  z-index: 99;
+  margin-bottom: 30px;
+}
+
+.bg-footer ul li a {
+  color: #f4f1d0;
+  font-size: 20px;
+}
+
+.bg-footer p {
+  color: #f4f1d0;
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+footer {
+  margin-top: 120px;
+  position: relative;
+}
+
+.ondas-footer {
+  bottom: -10px;
+  position: relative;
+}
+
+@media screen and (min-width: 1200px) {
+  .ondas-footer {
+    bottom: -80px;
+  }
+}
+
+.arrow-up {
+  height: 100px;
+  top: -80px;
+  right: 80px;
+}
+
+@media screen and (max-width: 759px) {
+  .arrow-up {
+    width: 60px;
+    right: 30px;
   }
 }
