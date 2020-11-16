@@ -1,133 +1,182 @@
-const comida = "Pizza";
-const liquido = new String("Água");
-const ano = new String(2018);
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-/* STR.LENGTH
-Propriedade com o total de caracteres da string. */
+    <title>Document</title>
+    <link rel="shortcut icon" href="#" />
+  </head>
 
-const comida2 = "Pizza";
-const frase1 = "A melhor comida";
+  <style>
+    body,
+    p,
+    h1,
+    h2,
+    ul,
+    li {
+      margin: 0px;
+      padding: 0px;
+    }
 
-comida2.length; // 5
-frase.length; // 15
+    li {
+      list-style: none;
+    }
 
-comida2[0]; // P
-frase[0]; // A
-frase[frase.length - 1]; // a
+    a {
+      text-decoration: none;
+      color: black;
+    }
 
-/* STR.CHARAT(N)
-Retorna o caracter de acordo com o index de (n). */
+    *::after,
+    *::before {
+      box-sizing: border-box;
+    }
 
-const linguagem = "JavaScript";
+    * {
+      box-sizing: border-box;
+    }
 
-linguagem.charAt(0); // J
-linguagem.charAt(2); // v
-linguagem.charAt(linguagem.length - 1); // t
+    img {
+      display: block;
+      max-width: 100%;
+    }
+    /* FIM DO RESET */
+    :root {
+      font-size: 62.5%;
+    }
 
-/* STR.CONCAT(STR2, STR3, ...)
-Concatena as strings e retorna o resultado. */
-const frase = "A melhor linguagem é ";
-const linguagem = "JavaScript";
+    body {
+      background-color: #1e1f26;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
-const fraseCompleta = frase.concat(linguagem, "!!");
+    .menu {
+      margin-top: 200px;
+      background: cornflowerblue;
+      width: 90px;
+      height: 90px;
+      position: relative;
+      border-radius: 15px;
+      cursor: pointer;
+      transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+    main.menuOpen {
+      height: 320px;
+    }
+    /* tres traçõs */
+    .button {
+      display: block;
+      background: rgb(228, 228, 228);
+      width: 40px;
+      height: 3px;
+      position: absolute;
+      top: 42px;
+      left: 25px;
+      transition: 0.4s ease-in-out;
+    }
+    .button:after,
+    .button:before {
+      display: block;
+      background: rgb(228, 228, 228);
+      width: 100%;
+      height: 100%;
+      content: "";
+      position: absolute;
+      transition: 0.4s ease-in-out;
+    }
+    .button:before {
+      top: -12px;
+    }
+    .button:after {
+      bottom: -12px;
+    }
+    /* rotação do botao */
+    .menuOpen .button {
+      transform: rotate(45deg);
+    }
+    .menuOpen .button:before {
+      transform: rotate(90deg);
+      top: 0;
+    }
+    .menuOpen .button:after {
+      transform: rotate(90deg);
+      bottom: 0;
+    }
 
-/* STR.INCLUDES(SEARCH, POSITION)
-Procura pela string exata dentro de outra string. A procura é case sensitive. */
-const fruta = "Banana";
-const listaFrutas = "Melancia, Banana, Laranja";
+    .atalhos {
+      margin-top: 90px;
+    }
 
-listaFrutas.includes(fruta); // true
-fruta.includes(listaFrutas); // false
+    .atalhos p {
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 14px;
+      margin-bottom: 35px;
+      text-align: center;
+      display: none;
+      opacity: 0;
+    }
 
-/* STR.ENDSWITH(SEARCH) E STR.STARTSWITH(SEARCH)
-Procura pela string exata dentro de outra string. A procura é case sensitive. */
-const fruta = "Banana";
+    .menuOpen .atalhos p {
+      animation: vemNenem 1s ease forwards;
+      display: block;
+    }
 
-fruta.endsWith("nana"); // true
-fruta.startsWith("Ba"); // true
-fruta.startsWith("na"); // false
+    .atalhos img {
+      opacity: 0;
+      display: block;
+      margin: 10px auto;
+    }
+    .menuOpen .atalhos img {
+      animation: vemNenem 0.8s ease forwards;
+    }
 
-/* STR.SLICE(START, END)
-Corta a string de acordo com os valores de start e end. */
-const transacao1 = "Depósito de cliente";
-const transacao2 = "Depósito de fornecedor";
-const transacao3 = "Taxa de camisas";
+    @keyframes vemNenem {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
 
-transacao1.slice(0, 3); // Dep
-transacao2.slice(0, 3); // Dep
-transacao3.slice(0, 3); // Tax
+  <body>
+    <main class="menu menuClosed" onclick="callback()">
+      <div class="button"></div>
+      <section class="atalhos">
+        <a href="#"
+          ><img src="/images/001-informacoes.svg" alt="" />
+          <p>Sobre</p></a
+        >
+        <a href="#"
+          ><img src="/images/002-identificacao.svg" alt="" />
+          <p>Contato</p></a
+        >
+        <a href="#">
+          <img src="/images/003-mais.svg" alt="" />
+          <p>Mais</p></a
+        >
+      </section>
+    </main>
+  </body>
 
-transacao1.slice(12); // cliente
-transacao1.slice(-4); // ente
-transacao1.slice(3, 6); // ósi
+  <script>
+    const menu = document.querySelector(".menu");
 
-/* STR.SUBSTRING(START, END)
-Corta a string de acordo com os valores de start e end. Não funcionar com valores negativos como o slice. */
-const linguagem = "JavaScript";
-linguagem.substring(3, 5); // aS
-linguagem.substring(0, 4); // Java
-linguagem.substring(4); // Script
-linguagem.substring(-3); // JavaScript
-
-/* STR.INDEXOF(SEARCH) E STR.LASTINDEXOF(SEARCH)
-Retorna o index da string, assim que achar o primeiro resultado ele já retorna. No caso do lastIndexOf ele retorna o último resultado. */
-
-const instrumento = "Guitarra";
-
-instrumento.indexOf("r"); // 5
-instrumento.lastIndexOf("r"); // 6
-instrumento.indexOf("ta"); // 3
-
-/* STR.PADSTART(N, STR) E STR.PADEND(N, STR)
-Aumenta o tamanho da string para o valor de n. Ou seja, uma string com 8 caracteres, se passarmos n = 10, ela passará a ter 10 caracteres. O preenchimento é feito com espaços, caso não seja declarado o segundo argumento. */
-
-const listaPrecos = ["R$ 99", "R$ 199", "R$ 12000"];
-
-listaPrecos.forEach((preco) => {
-  console.log(preco.padStart(10, "."));
-});
-
-listaPrecos[0].padStart(10, "."); // .....R$ 99
-listaPrecos[0].padEnd(10, "."); // R$ 99.....
-
-/* STR.REPEAT(N)
-Repete a string (n) vezes. */
-const frase = "Ta";
-
-frase.repeat(5); // TaTaTaTaTa
-
-/* STR.REPLACE(REGEXP|SUBSTR, NEWSTR|FUNCTION)
-Troca parte da string por outra. Podemos utilizar uma regular expression ou um valor direto. Se usarmos um valor direto ele irá trocar apenas o primeiro valor que encontrar. */
-
-let listaItens = "Camisas Bonés Calças Bermudas Vestidos Saias";
-listaItens = listaItens.replace(/[ ]+/g, ", ");
-
-let preco = "R$ 1200,43";
-preco = preco.replace(",", "."); // 'R$ 1200.43'
-
-/* STR.SPLIT(PADRAO)
-Divide a string de acordo com o padrão passado e retorna uma array. */
-
-const listaItens = "Camisas Bonés Calças Bermudas Vestidos Saias";
-const arrayItens = listaItens.split(" ");
-
-const htmlText = "<div>O melhor item</div><div>A melhor lista</div>";
-const htmlArray = htmlText.split("div");
-const htmlNovo = htmlArray.join("section");
-
-/* STR.TOLOWERCASE() E STR.TOUPPERCASE()
-Retorna a string em letras maiúsculas ou minúsculas. Bom para verificarmos input de usuários. */
-const sexo1 = "Feminino";
-const sexo2 = "feminino";
-const sexo3 = "FEMININO";
-
-sexo1.toLowerCase() === "feminino"; // true
-sexo2.toLowerCase() === "feminino"; // true
-sexo3.toLowerCase() === "feminino"; // true
-
-/* STR.TRIM(), STR.TRIMSTART(), STR.TRIMEND()
-Remove espaço em branco do início ou final de uma string. */
-const valor = "  R$ 23.00   ";
-valor.trim(); // 'R$ 23.00'
-valor.trimStart(); // 'R$ 23.00   '
-valor.trimEnd(); // '  R$ 23.00'
+    function callback() {
+      menu.classList.toggle("menuOpen");
+      menu.classList.toggle("menuClosed");
+    }
+    function target(event) {
+      if (coisa.target != menu) {
+        menu.classList.add("menuClosed");
+        menu.classList.remove("menuOpen");
+      }
+    }
+    document.addEventListener("click", target);
+  </script>
+</html>

@@ -207,6 +207,10 @@ body {
   font-family: "IBM Plex Sans", sans-serif;
 }
 
+body.ativo {
+  overflow: hidden;
+}
+
 ::selection {
   background: #F98E64;
 }
@@ -219,7 +223,6 @@ body {
   height: 500px;
   background-color: #282a2d;
   position: relative;
-  z-index: -10;
 }
 
 .intro nav {
@@ -296,6 +299,7 @@ body {
   font-weight: 500;
   cursor: pointer;
   z-index: 99;
+  transition: 0.2s ease;
 }
 
 .menu::after {
@@ -310,6 +314,10 @@ body {
   vertical-align: middle;
 }
 
+.menu:hover {
+  transform: scale(1.05);
+}
+
 .bg-icons {
   background-image: url("../img/bg-intro-desktop.svg");
   background-repeat: no-repeat;
@@ -319,7 +327,7 @@ body {
   right: 20px;
   top: 180px;
   background-size: contain;
-  z-index: -2;
+  z-index: 2;
 }
 
 @media screen and (min-width: 760px) and (max-width: 1199px) {
@@ -445,6 +453,52 @@ button.arrow {
   to {
     transform: translate(0px, 10%);
     opacity: 50%;
+  }
+}
+
+@keyframes opaciti {
+  0% {
+    opacity: 20%;
+    position: absolute;
+    right: -600px;
+  }
+  50% {
+    opacity: 90%;
+  }
+  100% {
+    opacity: 100%;
+    right: -0px;
+  }
+}
+
+@keyframes opaciti-volta {
+  0% {
+    opacity: 20%;
+    position: absolute;
+    left: -600px;
+  }
+  50% {
+    opacity: 90%;
+  }
+  100% {
+    opacity: 100%;
+    left: -0px;
+  }
+}
+
+@keyframes opaciti-volta2 {
+  0% {
+    opacity: 20%;
+    position: absolute;
+    transform: translateX(0);
+  }
+  50% {
+    opacity: 90%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(100%);
+    display: none;
   }
 }
 
@@ -695,7 +749,7 @@ button.arrow {
   position: absolute;
   right: 360px;
   top: 310px;
-  z-index: -9;
+  z-index: 2;
 }
 
 @media screen and (min-width: 760px) and (max-width: 1199px) {
@@ -1671,4 +1725,359 @@ button.arrow {
   font-weight: 500;
   text-transform: uppercase;
   font-size: 14px;
+}
+
+.saiba-mais {
+  margin-top: 120px;
+}
+
+.saiba-mais h2 {
+  font-size: 38px;
+  line-height: 54px;
+  font-weight: 700;
+  letter-spacing: 4.5%;
+  text-transform: uppercase;
+  font-family: "IBM Plex Mono", monospace;
+  font-style: normal;
+  margin: 60px 0;
+}
+
+@media screen and (max-width: 759px) {
+  .saiba-mais h2 {
+    font-size: 28px;
+  }
+}
+
+.saiba-mais h2 span {
+  color: #FC6E40;
+}
+
+.slider-container {
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .slider-container {
+    height: 490px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .slider-container {
+    height: 490px;
+  }
+}
+
+.slider-container button {
+  position: absolute;
+  border: none;
+  width: 60px;
+  height: 100%;
+  cursor: pointer;
+  background-color: initial;
+}
+
+@media screen and (min-width: 1200px) {
+  .slider-container button {
+    display: none;
+  }
+}
+
+.right {
+  right: 0;
+  background-image: url(../img/seta-esquerda-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.left {
+  left: 0;
+  right: 0;
+  background-image: url(../img/seta-direita-mobile.svg);
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.card {
+  max-width: 330px;
+  background: linear-gradient(171.83deg, rgba(0, 0, 0, 0.03) 8.49%, rgba(0, 0, 0, 0.012) 46.94%);
+  padding: 30px 20px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-bottom: 40px;
+  box-shadow: 1px 1px 2px 0.5px rgba(118, 117, 104, 0.1);
+  position: relative;
+  padding-bottom: 60px;
+  margin-left: 30px;
+  height: 420px;
+}
+
+.card h3 {
+  position: relative;
+  font-size: 18px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: normal;
+}
+
+.card h3:after {
+  content: '';
+  display: inline-block;
+  background-image: url(../img/espaçador-saiba-mais.svg);
+  width: 100px;
+  height: 100%;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  bottom: -60px;
+}
+
+.card img {
+  margin: 0 auto;
+  width: 220px;
+  padding-left: 30px;
+}
+
+.card p {
+  margin-top: 50px;
+  color: #767568;
+  font-size: 16px;
+  line-height: 1.4rem;
+}
+
+@media screen and (max-width: 759px) {
+  .card2 h3:after {
+    bottom: -85px;
+  }
+}
+
+.arrow-menor {
+  width: 32px;
+  position: absolute;
+  height: 20px;
+  right: 20px;
+  bottom: 20px;
+  background-image: url(../img/setinha.svg);
+  background-repeat: no-repeat;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 2px 2px 2px 0.5px rgba(249, 142, 100, 0.3);
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  .card {
+    width: 330px;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  .card {
+    width: 280px;
+    height: 460px;
+  }
+}
+
+@media screen and (min-width: 760px) and (max-width: 1199px) {
+  [data-target='none'] {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 759px) {
+  [data-target='none'] {
+    display: none;
+  }
+}
+
+[data-target='block'] {
+  animation: opaciti both 0.2s ease-in-out;
+}
+
+[data-target='animacao'] {
+  animation: opaciti-volta both 0.2s ease-in-out;
+}
+
+.counter {
+  position: absolute;
+  bottom: 0px;
+  width: 40px;
+  color: #767568;
+  z-index: 99;
+  z-index: 99;
+  font-size: 24px;
+  text-align: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .counter {
+    display: none;
+  }
+}
+
+.google {
+  width: 190px !important;
+}
+
+.arrow-up {
+  background-image: url(../img/seta-up.svg);
+  width: 90px;
+  height: 100%;
+  background-repeat: no-repeat;
+  display: block;
+  cursor: pointer;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  position: absolute;
+}
+
+footer {
+  position: relative;
+  height: 400px;
+}
+
+.menu-open {
+  display: none;
+  opacity: 0;
+  overflow: hidden;
+}
+
+.ativo .menu-open {
+  z-index: 10000;
+  width: 50vw;
+  height: 100vh;
+  background-color: #282a2d;
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  display: block;
+  animation: opaciti 400ms both ease;
+  box-shadow: 2px 2px 2px 2px rgba(244, 241, 208, 0.1);
+}
+
+@media screen and (max-width: 759px) {
+  .ativo .menu-open {
+    width: 100vw;
+  }
+}
+
+.ativo .menu-open ul {
+  margin: 0 auto;
+  margin-left: 100px;
+  padding-top: 100px;
+}
+
+.ativo .menu-open ul li {
+  color: #f4f1d0;
+  font-size: 38px;
+  line-height: 54px;
+  font-weight: 700;
+  letter-spacing: 4.5%;
+  text-transform: uppercase;
+  font-family: "IBM Plex Mono", monospace;
+  font-style: normal;
+  font-size: 22px;
+  cursor: pointer;
+  max-width: 290px;
+  line-height: 35px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 759px) {
+  .ativo .menu-open ul li {
+    font-size: 28px;
+  }
+}
+
+.ativo .menu-open ul li span {
+  color: #FC6E40;
+}
+
+@media screen and (max-width: 759px) {
+  .ativo .menu-open ul li {
+    font-size: 18px;
+  }
+}
+
+.ativo .menu-open ul li:after {
+  content: '';
+  display: block;
+  width: 0%;
+  position: absolute;
+  height: 2px;
+  background: #f4f1d0;
+  -webkit-transition: .4s ease;
+  transition: .4s ease;
+}
+
+.ativo .menu-open ul li:before {
+  content: '';
+  display: inline-block;
+  width: 10%;
+  position: absolute;
+  background: url(../img/seta-down.svg);
+  background-repeat: no-repeat;
+  height: 20px;
+  left: 40px;
+  -webkit-transition: .3s;
+  transition: .3s;
+  margin-top: 10px;
+  opacity: 10%;
+}
+
+.ativo .menu-open ul li:hover:after {
+  width: 40%;
+}
+
+.ativo .menu-open ul li:hover:before {
+  opacity: 100%;
+}
+
+.ativo .menu-open ul:after {
+  content: '';
+  position: absolute;
+  z-index: -99;
+  background-image: url(../img/blob-2-b.svg);
+  width: 100px;
+  height: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  right: 60px;
+  top: 0px;
+  transition: 0.7s ease-out;
+}
+
+@media screen and (max-width: 759px) {
+  .ativo .menu-open ul:after {
+    width: 80px;
+    top: 10px;
+  }
+}
+
+.ativo .menu-open ul:before {
+  content: '';
+  position: absolute;
+  z-index: -99;
+  background-image: url(../img/blob-2-c.svg);
+  width: 100px;
+  height: 100%;
+  display: block;
+  background-repeat: no-repeat;
+  right: 0px;
+  top: 100px;
+  transition: 0.7s ease-out;
+}
+
+@media screen and (max-width: 759px) {
+  .ativo .menu-open ul:before {
+    width: 80px;
+    top: 90px;
+  }
 }

@@ -62,3 +62,216 @@
     }
 
 }
+
+//saiba mais
+.saiba-mais {
+    margin-top: 120px;
+
+    h2 {
+        @include titulo;
+        margin: 60px 0;
+    }
+}
+
+.slider-container {
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+    @include d(m) {
+        height: 490px;
+    }
+
+    @include d(s) {
+        height: 490px;
+    }
+
+    button {
+        position: absolute;
+        border: none;
+        width: 60px;
+        height: 100%;
+        cursor: pointer;
+        background-color: initial;
+
+        @include d(l) {
+            display: none;
+        }
+    }
+}
+
+.right {
+    right: 0;
+    background-image: url(../img/seta-esquerda-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+
+}
+
+.left {
+    left: 0;
+    right: 0;
+    background-image: url(../img/seta-direita-mobile.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+}
+
+
+
+.card {
+    max-width: 330px;
+    background: $gradiente-branco;
+    padding: 30px 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 2px 0.5px rgba($preto-claro, $alpha: 0.1);
+    position: relative;
+    padding-bottom: 60px;
+    margin-left: 30px;
+    height: 420px;
+
+
+
+    h3 {
+        position: relative;
+        font-size: 18px;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: normal;
+
+
+
+        &:after {
+            content: '';
+            display: inline-block;
+            background-image: url(../img/espaçador-saiba-mais.svg);
+            width: 100px;
+            height: 100%;
+            background-repeat: no-repeat;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            bottom: -60px;
+
+
+
+        }
+
+
+    }
+
+    img {
+        margin: 0 auto;
+        width: 220px;
+        padding-left: 30px;
+    }
+
+    p {
+        margin-top: 50px;
+        color: $preto-claro;
+        font-size: 16px;
+        line-height: 1.4rem;
+    }
+
+
+}
+
+.card2 h3:after {
+    @include d(s) {
+        bottom: -85px;
+
+    }
+
+}
+
+.arrow-menor {
+    width: 32px;
+    position: absolute;
+    height: 20px;
+    right: 20px;
+    bottom: 20px;
+    background-image: url(../img/setinha.svg);
+    background-repeat: no-repeat;
+}
+
+.card:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 2px 2px 0.5px rgba($laranja-claro, $alpha: 0.3);
+
+}
+
+.card {
+
+    @include d(m) {
+        width: 330px;
+    }
+
+    @include d(s) {
+        width: 280px;
+        height: 460px;
+    }
+}
+
+[data-target='none'] {
+    @include d(m) {
+        display: none;
+
+    }
+
+    @include d(s) {
+        display: none;
+    }
+}
+
+[data-target='block'] {
+    animation: opaciti both 0.2s ease-in-out;
+
+}
+
+[data-target='animacao'] {
+    animation: opaciti-volta both 0.2s ease-in-out;
+
+}
+
+.counter {
+    @include d(l) {
+        display: none;
+    }
+
+    position: absolute;
+    bottom: 0px;
+    width: 40px;
+    color: $preto-claro;
+    z-index: 99;
+    z-index: 99;
+    font-size: 24px;
+    text-align: center;
+}
+
+.google {
+    width: 190px !important;
+}
+
+
+
+
+
+.arrow-up {
+    background-image: url(../img/seta-up.svg);
+    width: 90px;
+    height: 100%;
+    background-repeat: no-repeat;
+    display: block;
+    cursor: pointer;
+    right: 0;
+    bottom: 0;
+    z-index: 99;
+    position: absolute;
+}
+
+footer {
+    position: relative;
+    height: 400px;
+}

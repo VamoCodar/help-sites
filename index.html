@@ -18,8 +18,8 @@
         <nav class="container">
 
             <div class="row justify-between items-center">
-                <div class="logo"><img src="img/logo.svg" alt="logo"></div>
-                <div class="menu">Menu</div>
+                <div class="logo"><a href="#"></a><img src="img/logo.svg" alt="logo"></div>
+                <div class="menu"> Menu</div>
             </div>
             <!-- fim logo e menu -->
             <h1>Design e<br> desenvolvimento<br>
@@ -55,7 +55,7 @@
     <span class="nuvem rellax" data-rellax-speed="2" data-rellax-xs-speed="2" data-rellax-mobile-speed="2" data-rellax-tablet-speed="3" data-rellax-desktop-speed="3"></span>
     <!-- fim da nuvem -->
 
-    <section class="oque-fazemos">
+    <section class="oque-fazemos" id="oque-fazemos">
         <div class="container">
             <h2>o que fazemos<span>.</span></h2>
             <div class="bg-fundo">
@@ -81,7 +81,7 @@
     </section>
     <!-- fim da primeira seção -->
 
-    <section class="processo">
+    <section class="processo" id="processo">
         <div class="container">
             <h2>como é o processo<span>.</span></h2>
             <p>Parceria com o cliente. Esse é o segredo para construirmos seu projeto como você precisa que seja.</p>
@@ -95,7 +95,7 @@
         </div>
     </section>
     <!-- fim seção processo -->
-    <section class="feito-a-mao">
+    <section class="feito-a-mao" id="feito-a-mao">
         <div class="container">
             <h2>porque um site feito a mão é <br> melhor<span>.</span></h2>
             <ul class="row justify-center">
@@ -132,7 +132,7 @@
     </section>
     <!-- fim feito a mão -->
 
-    <section class="preco">
+    <section class="preco" id="preco">
         <div class="container">
             <h2>PREÇO<span>.</span></h2>
             <p>colocar sua empresa com a visibilidade adequada <br>
@@ -173,7 +173,7 @@
         <span class="blob-3-b"></span>
         <span class="blob-3-c"></span>
     </section>
-    <section class="quem-somos">
+    <section class="quem-somos" id="quem-somos">
         <div class="container">
             <h2>quem somos<span>.</span></h2>
             <div class="card-quem-somos row justify-between items-center ">
@@ -189,7 +189,68 @@
             </div>
         </div>
     </section>
-    <button class="arrow"></button>
+    <!-- fim quem somos -->
+    <section class="saiba-mais" id="saiba-mais">
+        <div class="container">
+            <h2>saiba mais<span>.</span></h2>
+            <div class="slider-container row ">
+                <div class=" card card0 grid-4" data-target="block">
+                    <a href="https://www.medium.com">
+                        <img src="img/monitor-relevante.svg" alt="relevante">
+                        <h3>COMO DEIXAR SEU SITE MAIS
+                            RELEVANTE.</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+                        <span class="arrow-menor"></span>
+                    </a>
+                </div>
+                <div class=" card card1 grid-4" data-target="none">
+                    <a href="https://www.medium.com">
+                        <img src="img/money-icon.svg" alt="dinheiro">
+                        <h3>qual o custo mensal de um site.</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+                        <span class="arrow-menor"></span>
+                    </a>
+                </div>
+
+                <div class="card card2 grid-4" data-target="none">
+                    <a href="https://www.medium.com">
+                        <img class="google" src="img/google-svg.svg" alt="relevante">
+                        <h3>como destacar seu site nas pesquisas do google.</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been</p>
+                        <span class="arrow-menor"></span>
+                    </a>
+                </div>
+
+
+
+
+                <button class="right"></button>
+                <button class="left"></button>
+                <span class="counter">1/3</span>
+
+            </div>
+            <footer>
+                <span href="body" class="arrow-up"></span>
+
+            </footer>
+
+
+
+        </div>
+    </section>
+
+    <button href='#oque-fazemos' class="arrow"></button>
+    <div class="menu-open">
+        <ul>
+            <li href="#oque-fazemos">O que Fazemos.</li>
+            <li href="#processo">Como é o Processo.</li>
+            <li href="#feito-a-mao">PORQUE UM SITE FEITO A MÃO É
+                MELHOR.</li>
+            <li href="#preco">Preço.</li>
+            <li href="#quem-somos">Quem Somos.</li>
+            <li href="#saiba-mais">Saiba Mais.</li>
+        </ul>
+    </div>
 
     <!-- javascript -->
     <script type="text/javascript" src="script/script.js"></script>

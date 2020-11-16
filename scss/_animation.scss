@@ -99,3 +99,56 @@
         opacity: 50%;
     }
 }
+
+@keyframes opaciti {
+    0% {
+        opacity: 20%;
+        position: absolute;
+        right: -600px;
+    }
+
+    50% {
+        opacity: 90%;
+    }
+
+    100% {
+        opacity: 100%;
+        right: -0px;
+    }
+}
+
+@keyframes opaciti-volta {
+    0% {
+        opacity: 20%;
+        position: absolute;
+        left: -600px;
+    }
+
+    50% {
+        opacity: 90%;
+    }
+
+    100% {
+        opacity: 100%;
+        left: -0px;
+    }
+}
+
+@keyframes opaciti-volta2 {
+    0% {
+        opacity: 20%;
+        position: absolute;
+        transform: translateX(0);
+    }
+
+    50% {
+        opacity: 90%;
+    }
+
+    100% {
+        opacity: 100%;
+        transform: translateX(100%);
+        display: none;
+
+    }
+}

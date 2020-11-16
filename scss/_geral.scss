@@ -6,6 +6,11 @@ body {
 
 }
 
+body.ativo {
+    overflow: hidden;
+
+}
+
 ::selection {
     background: $laranja-claro;
 }
@@ -18,7 +23,6 @@ body {
     height: 500px;
     background-color: $preto-base;
     position: relative;
-    z-index: -10;
 
     & nav {
         padding-top: 20px;
@@ -80,6 +84,7 @@ body {
     font-weight: 500;
     cursor: pointer;
     z-index: 99;
+    transition: 0.2s ease;
 
     &::after {
         content: '';
@@ -95,6 +100,10 @@ body {
     }
 }
 
+.menu:hover {
+    transform: scale(1.05);
+}
+
 //fim menu
 
 //icones bg
@@ -108,7 +117,7 @@ body {
     right: 20px;
     top: 180px;
     background-size: contain;
-    z-index: -2;
+    z-index: 2;
 
     @include d(m) {
         width: 300px;

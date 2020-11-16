@@ -236,7 +236,7 @@
     position: absolute;
     right: 360px;
     top: 310px;
-    z-index: -9;
+    z-index: 2;
 
     @include d (m) {
         right: initial;
