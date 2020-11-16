@@ -1,0 +1,59 @@
+.bg-footer {
+    width: 100%;
+    background: $preto-base;
+    height: 100%;
+
+    ul {
+        margin: 0 auto;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+
+        li {
+            z-index: 99;
+            margin-bottom: 30px;
+
+        }
+
+        li a {
+            color: $fundo;
+            font-size: 20px;
+        }
+    }
+
+    p {
+        color: $fundo;
+        text-align: center;
+        text-transform: capitalize;
+        margin-top: 20px;
+        font-size: 14px;
+    }
+}
+
+footer {
+    margin-top: 120px;
+    position: relative;
+}
+
+.ondas-footer {
+    bottom: -10px;
+    position: relative;
+
+    @include d(l) {
+        bottom: -80px;
+    }
+}
+
+.arrow-up {
+    height: 100px;
+    top: -80px;
+    right: 80px;
+
+    @include d(s) {
+        width: 60px;
+        right: 30px;
+
+    }
+
+}
