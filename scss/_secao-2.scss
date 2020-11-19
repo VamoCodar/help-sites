@@ -1,7 +1,7 @@
 .processo {
     h2 {
         @include titulo;
-        margin-top: 90px;
+        margin-top: 140px;
     }
 
     p {
@@ -304,7 +304,7 @@
     background-repeat: no-repeat;
     right: 0px;
     top: 130px;
-    transition: 1.9s ease;
+    transition: 1.2s ease;
 
     @include d(m) {
         width: 180px;
@@ -338,7 +338,7 @@
     background-repeat: no-repeat;
     right: 0px;
     top: 320px;
-    transition: 1.3s ease;
+    transition: 0.8s ease;
 
     @include d(m) {
         width: 180px;

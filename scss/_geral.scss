@@ -154,6 +154,7 @@ header {
 
 button.arrow {
     background-image: url(../img/seta-down.svg);
+    background-position: center;
     display: block;
     width: 32px;
     height: 22px;
@@ -169,4 +170,17 @@ button.arrow {
     top: 360px;
     left: 0;
     right: 0;
+    animation: pula-pula 1s ease-out alternate-reverse infinite;
+}
+
+
+@keyframes pula-pula {
+    to {
+        transform: translateY(0px);
+    }
+
+    from {
+        transform: translateY(10px);
+
+    }
 }
