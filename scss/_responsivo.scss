@@ -56,7 +56,7 @@ $ss-device:370px;
     @include container;
 }
 
-//função do grid bonitinha com o offset gambiarrado
+//função do grid bonitinha 
 @function grid($col, $offset: false) {
     $width: $col / $cols * 100 + "%";
     $result: calc(#{$width} - #{$gutter});

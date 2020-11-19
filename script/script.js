@@ -114,12 +114,12 @@ function active() {
 
 function fecha(click) {
     if (click.target != menuOpen && click.target != menu) {
-        menuOpen.setAttribute("style", "animation: opaciti-volta2 300ms both ease;");
+        menuOpen.setAttribute("style", "animation: opaciti-volta2 300ms both ease-out;");
 
 
         setTimeout(() => {
             body.classList.remove('ativo')
-            menuOpen.removeAttribute("style", "animation: opaciti-volta 400ms both ease;");
+            menuOpen.removeAttribute("style", "animation");
         }, 300);
 
 
