@@ -114,6 +114,21 @@
     }
 }
 
+//animção data atributo no saiba mais de volta
+@keyframes opaciti-volta {
+    0% {
+        opacity: 80%;
+        position: absolute;
+        left: -60%;
+    }
+
+
+    100% {
+        opacity: 100%;
+        left: 0%;
+    }
+}
+
 
 
 @keyframes opaciti-volta2 {

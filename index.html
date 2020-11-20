@@ -10,6 +10,8 @@
         gtag('js', new Date());
         gtag('config', 'G-7NG7275EGZ');
     </script>
+
+
     <!-- end -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -69,7 +71,7 @@
             <h2>o que fazemos<span>.</span></h2>
             <div class="bg-fundo">
                 <h3>criação de sites web</h3>
-                <p>Aqui nós criamos sites para empresas pequenas e médias, sempre prezando por um design agradavel e responsivo. Para obter a potencialização máxima dos resultados é imprescindível criar uma presença online com um layout totalmente inovador e moderno, nos fazemos uso das particularidades da sua empresa para oferecer um site que gere conversão.
+                <p>Aqui criamos sites para empresas pequenas e médias, sempre prezando por um design agradável e responsivo. Para obter a potencialização máxima dos resultados é imprescindível criar uma presença online com um layout totalmente inovador e moderno, nos fazemos uso das particularidades da sua empresa para oferecer um site que gere conversão.
                 </p>
                 <ul class="row icon-web justify-around">
                     <li><img src="img/icon-responsive.svg" alt="responsivo">
@@ -111,7 +113,7 @@
             <ul class="row justify-center">
                 <li class="grid-4">
                     <span><img src="img/fast-icon.svg" alt="rapido-icon"></span>
-                    <p>carregameto rapido</p>
+                    <p>carregamento rapido</p>
                 </li>
                 <li class="grid-4">
                     <span><img src="img/exclusive-icon.svg" alt="exclusivo"></span>
@@ -123,11 +125,11 @@
                 </li>
                 <li class="grid-4">
                     <span> <img src="img/adaptavel-icon.svg" alt="adaptavel"></span>
-                    <p>Adaptavel a expansão</p>
+                    <p>Adaptável a expansão</p>
                 </li>
                 <li class="grid-4">
                     <span> <img src="img/clean-code.svg" alt="codigo"></span>
-                    <p>Codigo limpo e customizavel</p>
+                    <p>Código limpo e customizavel</p>
                 </li>
                 <li class="grid-4">
                     <span><img src="img/manutenção-icon.svg" alt="manutençao"></span>
@@ -145,7 +147,7 @@
     <section class="preco" id="preco">
         <div class="container">
             <h2>PREÇO<span>.</span></h2>
-            <p>colocar sua empresa com a visibilidade adequada <br>
+            <p>Deixar sua empresa com a visibilidade adequada <br>
                 não tem valor.</p>
             <ul class="card-preco">
 
@@ -169,7 +171,7 @@
                 <li>
                     <p>Ferramenta de analise</p>
                 </li>
-                <li>
+                <li class="a-partir">
                     <h4>A PARTIR DE: <span>r$ 450,00</span></h4>
                 </li>
                 <button class="call">
@@ -187,7 +189,7 @@
         <div class="container">
             <h2>quem somos<span>.</span></h2>
             <div class="card-quem-somos row justify-between items-center ">
-                <p>A Help nasceu de um jovem com necessidade de oferecer serviços de design e desenvolvimento de sites para resolver problemas de empresas por meio de soluções criativas e ter visibilidade no mercado</p>
+                <p>A Help nasceu de um jovem com necessidade de oferecer serviços de design e desenvolvimento de sites para resolver problemas de empresas por meio de soluções criativas e ter visibilidade no mercado.</p>
                 <div class="logo-2"><img src="img/nova-logo-laranja.svg" alt="logo"></div>
                 <div class="grid-12 insta ">
                     <a target="_blank" href="https://www.instagram.com/webdesignhelpp/"><img class="instagram" src="img/instagram.svg" alt="instagram">
@@ -211,7 +213,7 @@
                         <img src="img/monitor-relevante.svg" alt="relevante">
                         <h3>COMO DEIXAR SEU SITE MAIS
                             RELEVANTE.</h3>
-                        <p>Leia mais sobre dicas que fazem toda a diferença para deixar seu site mais agradavel e chamativo</p>
+                        <p>Leia mais sobre dicas que fazem toda a diferença para deixar seu site mais agradável e chamativo</p>
                         <span class="arrow-menor"></span>
                     </a>
                 </div>
@@ -219,7 +221,7 @@
                     <a href="https://www.medium.com">
                         <img src="img/money-icon.svg" alt="dinheiro">
                         <h3>qual o custo mensal de um site.</h3>
-                        <p>Leia mais sobre custo de hospedagem na nuvem, o que é um dominio e quanto custa</p>
+                        <p>Leia mais sobre custo de hospedagem na nuvem, o que é um domínio e quanto custa</p>
                         <span class="arrow-menor"></span>
                     </a>
                 </div>
@@ -257,6 +259,7 @@
     <!-- fim footer -->
     <button href='#oque-fazemos' class="arrow"></button>
     <div class="menu-open">
+        <i></i>
         <ul>
             <li href="#oque-fazemos">O que Fazemos.</li>
             <li href="#processo">Como é o Processo.</li>
@@ -272,8 +275,23 @@
     <script type="text/javascript" src="script/script.js"></script>
     <script type="text/javascript" src="script/rellax.min.js"></script>
 
-
     <script>
+        var images = new Array();
+
+        function preload() {
+            images[0] = new Image();
+            images[0].src = "img/desenvolvimento-mobile-hover.svg";
+
+            images[1] = new Image();
+            images[1].src = "img/design-mobile-hover.svg";
+
+            images[2] = new Image();
+            images[2].src = "img/briefing-mobile-hover.svg";
+        }
+
+        preload();
+        //fim preload
+        //inicio relax
         var rellax = new Rellax('.nuvem', {
             speed: 4,
             center: false,
